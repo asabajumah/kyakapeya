@@ -9,25 +9,30 @@
 
 <meta name="description" content="Kyakapeya Wap is a Ugandan software company and video game developer and publisher founded by CEO Asaba Jumah in Hoima, Uganda.">
 
-<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="https://kyakapeya.asabajumah.top/logo.png">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-<!-- KYAKAPEYA WAP COMPANY + ASABA JUMAH KNOWLEDGE GRAPH SCHEMA -->
+<!-- KYAKAPEYA WAP + ASABA JUMAH KNOWLEDGE GRAPH -->
 
 <script type="application/ld+json">
 {
 "@context":"https://schema.org",
 "@graph":[
 
-
 {
 "@type":"Organization",
 "@id":"https://kyakapeya.asabajumah.top/#company",
+
 "name":"Kyakapeya Wap",
+
 "url":"https://kyakapeya.asabajumah.top/",
-"logo":"https://kyakapeya.asabajumah.top/logo.png",
+
+"logo":{
+"@type":"ImageObject",
+"url":"https://kyakapeya.asabajumah.top/logo.png"
+},
 
 "description":"Kyakapeya Wap is a Ugandan software company and video game developer and publisher based in Hoima, Uganda.",
 
@@ -46,17 +51,8 @@
 "https://www.facebook.com/KyakapeyaWap",
 "https://www.instagram.com/Kyakapeya_Wap",
 "https://www.x.com/KyakapeyaWap"
-]
+],
 
-},
-
-
-{
-"@type":"Corporation",
-"@id":"https://kyakapeya.asabajumah.top/#softwarecompany",
-"name":"Kyakapeya Wap",
-"url":"https://kyakapeya.asabajumah.top/",
-"description":"Kyakapeya Wap develops software solutions and video games in Uganda.",
 "industry":[
 "Software Development",
 "Video Game Development",
@@ -68,6 +64,7 @@
 
 {
 "@type":"Person",
+
 "@id":"https://www.asabajumah.top/#person",
 
 "name":"Asaba Jumah",
@@ -78,7 +75,6 @@
 
 "description":"Asaba Jumah is a Ugandan actor, musician, author, film producer, media producer and CEO of Kyakapeya Wap.",
 
-
 "birthDate":"2005-09-23",
 
 "birthPlace":{
@@ -86,15 +82,13 @@
 "name":"Hoima, Uganda"
 },
 
-
 "nationality":{
 "@type":"Country",
 "name":"Uganda"
 },
 
-
 "jobTitle":[
-"CEO of Kyakapeya Wap",
+"Chief Executive Officer of Kyakapeya Wap",
 "Actor",
 "Musician",
 "Author",
@@ -102,40 +96,19 @@
 "Media Producer"
 ],
 
-
 "worksFor":{
 "@id":"https://kyakapeya.asabajumah.top/#company"
 },
 
-
-"knowsAbout":[
-"Software Development",
-"Video Game Development",
-"Film Acting",
-"Music",
-"Book Writing",
-"Media Production"
-],
-
-
 "sameAs":[
-
 "https://lg.wikipedia.org/wiki/Asaba_Jumah",
-
 "https://www.imdb.com/name/nm18243050/",
-
 "https://www.themoviedb.org/person/6077619-asaba-jumah",
-
 "https://x.com/asabajumah",
-
 "https://www.facebook.com/djfelixpro",
-
 "https://www.instagram.com/djfelixpro",
-
 "https://www.tiktok.com/@asabajumah",
-
 "https://www.youtube.com/@asabajumah"
-
 ]
 
 },
@@ -143,16 +116,34 @@
 
 {
 "@type":"Role",
+
+"roleName":"Chief Executive Officer (CEO)",
+
 "member":{
 "@id":"https://www.asabajumah.top/#person"
 },
-"roleName":"Chief Executive Officer (CEO)",
+
 "organization":{
 "@id":"https://kyakapeya.asabajumah.top/#company"
 },
+
 "startDate":"2023-04-11"
+
+},
+
+
+{
+"@type":"WebSite",
+
+"name":"Kyakapeya Wap",
+
+"url":"https://kyakapeya.asabajumah.top/",
+
+"publisher":{
+"@id":"https://kyakapeya.asabajumah.top/#company"
 }
 
+}
 
 ]
 }
@@ -167,11 +158,15 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 body{
 
 font-family:Arial,sans-serif;
+
 background:#020617;
+
 color:white;
+
 overflow-x:hidden;
 
 }
@@ -180,11 +175,17 @@ overflow-x:hidden;
 .navbar{
 
 position:fixed;
+
 top:0;
+
 width:100%;
 
 display:flex;
+
+align-items:center;
+
 justify-content:center;
+
 gap:25px;
 
 padding:15px;
@@ -200,10 +201,42 @@ z-index:999;
 }
 
 
+.logo-area{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+color:#38bdf8;
+
+font-weight:bold;
+
+}
+
+
+.logo-area img{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+box-shadow:0 0 20px rgba(56,189,248,.5);
+
+}
+
+
 .navbar a{
 
 color:white;
+
 text-decoration:none;
+
 font-weight:bold;
 
 }
@@ -213,16 +246,14 @@ font-weight:bold;
 
 color:#38bdf8;
 
-}
-
-
-
-.hero{
+}.hero{
 
 min-height:100vh;
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 text-align:center;
@@ -230,11 +261,35 @@ text-align:center;
 padding:120px 20px 60px;
 
 background:
+
 linear-gradient(
+
 135deg,
+
 #020617,
+
 #0f172a
+
 );
+
+}
+
+
+.hero img{
+
+width:160px;
+
+height:160px;
+
+border-radius:25px;
+
+object-fit:cover;
+
+margin-bottom:25px;
+
+box-shadow:
+
+0 0 45px rgba(56,189,248,0.5);
 
 }
 
@@ -256,9 +311,14 @@ font-size:20px;
 
 color:#cbd5e1;
 
-max-width:800px;
+max-width:850px;
+
+margin:10px auto;
+
+line-height:1.7;
 
 }
+
 
 
 .btn{
@@ -279,12 +339,14 @@ border-radius:10px;
 
 text-decoration:none;
 
+transition:.3s;
+
 }
 
 
 .btn:hover{
 
-transform:translateY(-3px);
+transform:translateY(-4px);
 
 }
 
@@ -299,6 +361,7 @@ margin:auto;
 padding:60px 20px;
 
 }
+
 
 
 .card{
@@ -318,7 +381,16 @@ padding:35px;
 
 color:#38bdf8;
 
+font-size:32px;
+
 margin-bottom:20px;
+
+}
+
+
+.card h3{
+
+margin-bottom:15px;
 
 }
 
@@ -327,10 +399,95 @@ margin-bottom:20px;
 
 color:#cbd5e1;
 
+line-height:1.8;
+
 margin-bottom:15px;
 
 }
 
+
+
+.service-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+
+.service-box{
+
+background:#020617;
+
+padding:25px;
+
+border-radius:15px;
+
+border:1px solid #1e293b;
+
+}
+
+
+
+.service-box i{
+
+font-size:35px;
+
+color:#38bdf8;
+
+margin-bottom:15px;
+
+}
+
+
+
+footer{
+
+text-align:center;
+
+padding:40px 20px;
+
+border-top:1px solid #1e293b;
+
+color:#94a3b8;
+
+}
+
+
+.social a{
+
+font-size:28px;
+
+margin:10px;
+
+color:#38bdf8;
+
+}
+
+
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-wrap:wrap;
+
+}
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+}
 
 </style>
 
@@ -340,202 +497,296 @@ margin-bottom:15px;
 <body>
 
 
+<!-- HEADER -->
+
 <div class="navbar">
 
-<a href="#">Home</a>
 
-<a href="#about">About</a>
+<div class="logo-area">
 
-<a href="/about/ceo-and-founder/asaba-jumah.html">CEO</a>
+<img src="https://kyakapeya.asabajumah.top/logo.png"
 
-<a href="#services">Services</a>
+alt="Kyakapeya Wap Logo">
 
-<a href="https://www.asabajumah.top/books.html">Books</a>
+
+<span>
+Kyakapeya Wap
+</span>
+
 
 </div>
 
 
+
+<a href="#">
+Home
+</a>
+
+
+<a href="#about">
+About
+</a>
+
+
+<a href="/about/ceo-and-founder/asaba-jumah.html">
+CEO
+</a>
+
+
+<a href="#services">
+Services
+</a>
+
+
+<a href="https://www.asabajumah.top/books.html">
+Books
+</a>
+
+
+
+</div>
+
+
+
+
+<!-- HERO SECTION -->
+
+
 <section class="hero">
+
 
 <div>
 
-<h1>Kyakapeya Wap</h1>
+
+<img src="https://kyakapeya.asabajumah.top/logo.png"
+
+alt="Kyakapeya Wap Logo">
+
+
+<h1>
+Kyakapeya Wap
+</h1>
+
+
 
 <p>
 Ugandan Software Company • Video Game Developer • Game Publisher
 </p>
+
 
 <p>
 Founded on 11 April 2023 in Hoima, Uganda.
 </p>
 
 
-<a class="btn" href="#about">
+
+<a href="#about" class="btn">
+
 Discover Company
+
 </a>
+
+
 
 </div>
 
-</section><!-- ABOUT COMPANY -->
+
+</section>
+
+
+
+
+
+<!-- ABOUT COMPANY -->
+
 
 <section id="about" class="section">
 
+
 <div class="card">
 
-<h2>About Kyakapeya Wap</h2>
+
+<h2>
+About Kyakapeya Wap
+</h2>
+
 
 <p>
 Kyakapeya Wap is a Ugandan software company and video game developer and publisher based in Hoima, Uganda.
 </p>
 
-<p>
-The company focuses on creating digital solutions, software projects, interactive entertainment, and video game experiences for users around the world.
-</p>
 
 <p>
-Founded on 11 April 2023, Kyakapeya Wap continues to explore innovation through technology, creativity, and digital media.
+The company focuses on software development, digital innovation, interactive entertainment, and video game experiences.
 </p>
+
+
+<p>
+Founded on 11 April 2023, Kyakapeya Wap combines creativity and technology to develop future digital products.
+</p>
+
+
 
 </div>
 
+
 </section>
+
+
 
 
 
 <!-- CEO SECTION -->
 
-<section id="ceo" class="section">
+
+<section class="section">
+
 
 <div class="card">
 
-<h2>CEO & Founder</h2>
 
-<h3 style="color:#38bdf8;margin-bottom:15px;">
+<h2>
+Founder & CEO
+</h2>
+
+
+<h3 style="color:#38bdf8;">
 Asaba Jumah
 </h3>
 
 
+
 <p>
-Asaba Jumah is a Ugandan actor, musician, author, film producer, and CEO of Kyakapeya Wap.
+Asaba Jumah is a Ugandan actor, musician, author, film producer, media producer and CEO of Kyakapeya Wap.
 </p>
 
 
+
 <p>
-He has appeared in several independent films and continues developing his career in both the film and music industries while leading technology and creative projects through Kyakapeya Wap.
+He leads Kyakapeya Wap while building projects across technology, entertainment, film and digital media.
 </p>
 
 
+
 <p>
-He was born to Mr. Muhumuza Elias and Ms. Balikya Hadijah in Hoima, Uganda.
+Born in Hoima, Uganda, Asaba Jumah is the son of Mr. Muhumuza Elias and Ms. Balikya Hadijah.
 </p>
+
 
 
 <div style="
 background:#020617;
 padding:20px;
-border-radius:12px;
-border:1px solid #1e293b;
+border-radius:15px;
 margin-top:20px;
+border:1px solid #1e293b;
 ">
+
 
 <p>
 <strong>Founder:</strong> Asaba Jumah
 </p>
 
+
 <p>
 <strong>Position:</strong> Chief Executive Officer (CEO)
 </p>
+
 
 <p>
 <strong>Company:</strong> Kyakapeya Wap
 </p>
 
+
 <p>
 <strong>Founded:</strong> 11 April 2023
 </p>
 
-</div>
-
 
 </div>
 
-</section>
 
 
+</div>
 
-<!-- SERVICES -->
+
+</section><!-- SERVICES SECTION -->
 
 <section id="services" class="section">
 
 <div class="card">
 
-<h2>Our Services</h2>
+<h2>
+Our Services
+</h2>
 
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-">
+<div class="service-grid">
 
 
-<div style="
-background:#020617;
-padding:25px;
-border-radius:15px;
-border:1px solid #1e293b;
-">
+<div class="service-box">
 
-<h3 style="color:#38bdf8;">
 <i class="fas fa-code"></i>
+
+<h3>
 Software Development
 </h3>
 
 <p>
-Building digital software solutions and technology products.
+Building modern software solutions, digital platforms and technology products.
 </p>
 
 </div>
 
 
 
-<div style="
-background:#020617;
-padding:25px;
-border-radius:15px;
-border:1px solid #1e293b;
-">
+<div class="service-box">
 
-<h3 style="color:#38bdf8;">
 <i class="fas fa-gamepad"></i>
-Video Games
+
+<h3>
+Video Game Development
 </h3>
 
 <p>
-Creating interactive games and entertainment experiences.
+Creating interactive games and entertainment experiences for players worldwide.
 </p>
 
 </div>
 
 
 
-<div style="
-background:#020617;
-padding:25px;
-border-radius:15px;
-border:1px solid #1e293b;
-">
 
-<h3 style="color:#38bdf8;">
+<div class="service-box">
+
 <i class="fas fa-cloud"></i>
+
+<h3>
 Digital Innovation
 </h3>
 
 <p>
-Developing creative technology projects for the future.
+Developing creative technology projects through innovation and imagination.
 </p>
 
 </div>
+
+
+
+<div class="service-box">
+
+<i class="fas fa-mobile-screen"></i>
+
+<h3>
+Mobile Applications
+</h3>
+
+<p>
+Creating mobile solutions designed for modern digital users.
+</p>
+
+</div>
+
 
 
 </div>
@@ -544,99 +795,136 @@ Developing creative technology projects for the future.
 </div>
 
 </section>
+
+
 
 
 
 <!-- COMPANY SOCIAL MEDIA -->
 
+
 <section class="section">
+
 
 <div class="card">
 
-<h2>Follow Kyakapeya Wap</h2>
+
+<h2>
+Follow Kyakapeya Wap
+</h2>
 
 
 <p>
-Connect with Kyakapeya Wap on social media.
+Connect with Kyakapeya Wap official social media pages.
 </p>
 
 
-<a class="btn" 
+
+<a class="btn"
+
 href="https://www.facebook.com/KyakapeyaWap"
+
 target="_blank">
 
 <i class="fab fa-facebook"></i>
+
 Facebook
 
 </a>
 
 
-<a class="btn" 
+
+<a class="btn"
+
 href="https://www.instagram.com/Kyakapeya_Wap"
+
 target="_blank">
 
 <i class="fab fa-instagram"></i>
+
 Instagram
 
 </a>
 
 
-<a class="btn" 
+
+
+<a class="btn"
+
 href="https://www.x.com/KyakapeyaWap"
+
 target="_blank">
 
 <i class="fab fa-x-twitter"></i>
+
 X
 
 </a>
 
 
+
 </div>
 
+
 </section>
+
+
+
 
 
 
 <!-- FOOTER -->
 
 
-<footer style="
-text-align:center;
-padding:40px 20px;
-border-top:1px solid #1e293b;
-color:#94a3b8;
-">
+<footer>
 
 
 <p>
+
 © 2026 Kyakapeya Wap. All Rights Reserved.
+
 </p>
 
 
 <p>
+
 Ugandan Software Company & Video Game Developer
+
 </p>
 
 
-<div style="margin-top:20px;font-size:25px;">
+
+<div class="social">
 
 
 <a href="https://www.facebook.com/KyakapeyaWap"
-style="color:#38bdf8;margin:10px;">
+
+target="_blank">
+
 <i class="fab fa-facebook"></i>
+
 </a>
+
 
 
 <a href="https://www.instagram.com/Kyakapeya_Wap"
-style="color:#38bdf8;margin:10px;">
+
+target="_blank">
+
 <i class="fab fa-instagram"></i>
+
 </a>
+
 
 
 <a href="https://www.x.com/KyakapeyaWap"
-style="color:#38bdf8;margin:10px;">
+
+target="_blank">
+
 <i class="fab fa-x-twitter"></i>
+
 </a>
+
 
 
 </div>
@@ -645,5 +933,7 @@ style="color:#38bdf8;margin:10px;">
 </footer>
 
 
+
 </body>
-</html>
+
+  </html>
